@@ -1,0 +1,19 @@
+# see https://docs.travis-ci.com/user/languages/javascript-with-nodejs/ for more hints
+language: node_js
+
+# list any node_js version you want to test against
+node_js:
+  - "12.13.1"
+
+# Install services
+services:
+  - docker
+
+script:
+  - echo "run tests if any"  
+
+deploy:
+  - provider: script
+    script: travis/deploy.sh
+    on:
+      branch: master
