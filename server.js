@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/ping', function(req, res) {
-	return res.status(200).send({message: 'GET /ping successful'});
+	return res.status(200).send({message: 'GET /ping successful HTTP 1.1'});
 })
 
 app.post('/test', function(req, res) {
